@@ -5,8 +5,6 @@ A Flutter package providing multiple Material Design and Cupertino (iOS) dialogs
 [![Pub](https://img.shields.io/pub/v/multiple_dialog.svg?style=flat-square)](https://pub.dev/packages/multiple_dialog)
 [![support](https://img.shields.io/badge/platform-flutter%7Cdart-ff69b4.svg?style=flat-square)](https://github.com/EmD-228/flutter_multi_dialogs)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/EmD-228/flutter_multi_dialogs/test.yml?branch=main&label=CI&style=flat-square)](https://github.com/EmD-228/flutter_multi_dialogs/actions)
-[![codecov](https://img.shields.io/codecov/c/github/EmD-228/flutter_multi_dialogs?style=flat-square)](https://codecov.io/gh/EmD-228/flutter_multi_dialogs)
 
 ## Features
 
