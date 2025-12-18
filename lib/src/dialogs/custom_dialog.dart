@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../builders/simple_builder.dart';
+import '../utils/material3_helper.dart';
 
 /// Shows a custom simple dialog
 ///
@@ -119,11 +120,6 @@ class CustomDialog extends StatelessWidget {
   /// Vertical position from -1 (top) to 1 (bottom), with 0 being center
   final double gravity;
 
-  static const RoundedRectangleBorder _defaultDialogShape =
-      RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12.0)));
-  static const double _defaultElevation = 24.0;
-
   @override
   Widget build(BuildContext context) {
     final DialogThemeData dialogTheme = DialogTheme.of(context);
@@ -131,6 +127,16 @@ class CustomDialog extends StatelessWidget {
       throw const FormatException(
           "Gravity must be greater than negative -1 and less than 1, or it won't show up on the page");
     }
+
+    // Get adaptive values for Material 3 support
+    final ShapeBorder adaptiveShape = shape ??
+        dialogTheme.shape ??
+        Material3Helper.getAdaptiveDialogShape(context);
+    final Color adaptiveBackgroundColor = backgroundColor ??
+        Material3Helper.getDialogBackgroundColor(context);
+    final double adaptiveElevation = elevation ??
+        dialogTheme.elevation ??
+        Material3Helper.getAdaptiveElevation(context);
 
     return AnimatedPadding(
       padding: MediaQuery.of(context).viewInsets +
@@ -149,12 +155,9 @@ class CustomDialog extends StatelessWidget {
             child: ConstrainedBox(
               constraints: const BoxConstraints(minWidth: 280.0),
               child: Material(
-                color: backgroundColor ??
-                    dialogTheme.backgroundColor ??
-                    Theme.of(context).dialogBackgroundColor,
-                elevation:
-                elevation ?? dialogTheme.elevation ?? _defaultElevation,
-                shape: shape ?? dialogTheme.shape ?? _defaultDialogShape,
+                color: adaptiveBackgroundColor,
+                elevation: adaptiveElevation,
+                shape: adaptiveShape,
                 type: MaterialType.card,
                 child: child,
               ),

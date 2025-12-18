@@ -5,13 +5,20 @@
   "packages": [
     {
       "name": "multiple_dialog",
-      "version": "0.1.6",
+      "version": "0.4.0",
       "dependencies": [
         "flutter"
       ],
       "devDependencies": [
         "flutter_lints",
         "flutter_test"
+      ]
+    },
+    {
+      "name": "flutter_lints",
+      "version": "3.0.2",
+      "dependencies": [
+        "lints"
       ]
     },
     {
@@ -43,6 +50,11 @@
         "sky_engine",
         "vector_math"
       ]
+    },
+    {
+      "name": "lints",
+      "version": "3.0.0",
+      "dependencies": []
     },
     {
       "name": "stream_channel",
@@ -146,6 +158,14 @@
       "dependencies": []
     },
     {
+      "name": "async",
+      "version": "2.13.0",
+      "dependencies": [
+        "collection",
+        "meta"
+      ]
+    },
+    {
       "name": "leak_tracker_testing",
       "version": "3.0.2",
       "dependencies": [
@@ -166,37 +186,9 @@
       ]
     },
     {
-      "name": "flutter_lints",
-      "version": "3.0.2",
-      "dependencies": [
-        "lints"
-      ]
-    },
-    {
-      "name": "lints",
-      "version": "3.0.0",
-      "dependencies": []
-    },
-    {
       "name": "term_glyph",
       "version": "1.2.2",
       "dependencies": []
-    },
-    {
-      "name": "boolean_selector",
-      "version": "2.1.2",
-      "dependencies": [
-        "source_span",
-        "string_scanner"
-      ]
-    },
-    {
-      "name": "async",
-      "version": "2.13.0",
-      "dependencies": [
-        "collection",
-        "meta"
-      ]
     },
     {
       "name": "string_scanner",
@@ -212,6 +204,14 @@
         "collection",
         "path",
         "term_glyph"
+      ]
+    },
+    {
+      "name": "boolean_selector",
+      "version": "2.1.2",
+      "dependencies": [
+        "source_span",
+        "string_scanner"
       ]
     },
     {

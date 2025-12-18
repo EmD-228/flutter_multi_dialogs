@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/direction.dart';
 import '../models/orientations.dart';
+import '../utils/material3_helper.dart';
 
 /// Shows a loading dialog with customizable orientation and message
 ///
@@ -90,14 +91,20 @@ class LoadingDialog extends Dialog {
   final Color? progressIndicatorColor;
   final double? progressIndicatorStrokeWidth;
 
-  static const double _defaultElevation = 24.0;
-  static const RoundedRectangleBorder _defaultDialogShape =
-      RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12.0)));
-
   @override
   Widget build(BuildContext context) {
     final DialogThemeData dialogTheme = DialogTheme.of(context);
+    
+    // Get adaptive values for Material 3 support
+    final ShapeBorder adaptiveShape = shape ??
+        dialogTheme.shape ??
+        Material3Helper.getAdaptiveDialogShape(context);
+    final Color adaptiveBackgroundColor = backgroundColor ??
+        Material3Helper.getDialogBackgroundColor(context);
+    final double adaptiveElevation = elevation ??
+        dialogTheme.elevation ??
+        Material3Helper.getAdaptiveElevation(context);
+
     return AnimatedPadding(
       padding: MediaQuery.of(context).viewInsets +
           const EdgeInsets.symmetric(horizontal: 40.0, vertical: 24.0),
@@ -111,11 +118,9 @@ class LoadingDialog extends Dialog {
         context: context,
         child: Center(
           child: Material(
-            color: backgroundColor ??
-                dialogTheme.backgroundColor ??
-                Theme.of(context).dialogBackgroundColor,
-            elevation: elevation ?? dialogTheme.elevation ?? _defaultElevation,
-            shape: shape ?? dialogTheme.shape ?? _defaultDialogShape,
+            color: adaptiveBackgroundColor,
+            elevation: adaptiveElevation,
+            shape: adaptiveShape,
             type: MaterialType.card,
             child: SafeArea(
               child: IntrinsicWidth(
