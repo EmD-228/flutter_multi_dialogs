@@ -7,7 +7,7 @@ void main() {
     testWidgets('should display loading dialog with vertical orientation', (WidgetTester tester) async {
       const direction = Direction(
         message: 'Loading...',
-        orientations: Orientations.Vertical,
+        orientations: Orientations.vertical,
         width: 100.0,
       );
 
@@ -44,7 +44,7 @@ void main() {
     testWidgets('should display loading dialog with horizontal orientation', (WidgetTester tester) async {
       const direction = Direction(
         message: 'Processing',
-        orientations: Orientations.Horizontal,
+        orientations: Orientations.horizontal,
         width: 200.0,
       );
 
@@ -81,7 +81,7 @@ void main() {
     testWidgets('should use custom progress indicator color', (WidgetTester tester) async {
       const direction = Direction(
         message: 'Loading...',
-        orientations: Orientations.Vertical,
+        orientations: Orientations.vertical,
       );
 
       await tester.pumpWidget(

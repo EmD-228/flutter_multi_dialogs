@@ -10,7 +10,7 @@ import '../models/orientations.dart';
 ///   context: context,
 ///   direction: const Direction(
 ///     message: "Loading...",
-///     orientations: Orientations.Horizontal,
+///     orientations: Orientations.horizontal,
 ///   ),
 /// );
 /// ```
@@ -55,7 +55,7 @@ class CupertinoLoadingDialog extends StatelessWidget {
   }
 
   Widget _buildContent() {
-    if (direction.orientations == Orientations.Vertical) {
+    if (direction.orientations == Orientations.vertical) {
       return Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment:

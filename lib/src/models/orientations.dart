@@ -1,9 +1,9 @@
 /// Enumeration for dialog content orientation
 enum Orientations {
   /// Vertical orientation (content stacked vertically)
-  Vertical,
+  vertical,
   
   /// Horizontal orientation (content arranged horizontally)
-  Horizontal,
+  horizontal,
 }
 

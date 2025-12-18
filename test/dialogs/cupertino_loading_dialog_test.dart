@@ -61,7 +61,7 @@ class TestWidget extends StatelessWidget {
               context: context,
               direction: const Direction(
                 message: 'Loading...',
-                orientations: Orientations.Vertical,
+                orientations: Orientations.vertical,
               ),
             );
           },
@@ -85,7 +85,7 @@ class TestWidgetHorizontal extends StatelessWidget {
               context: context,
               direction: const Direction(
                 message: 'Loading...',
-                orientations: Orientations.Horizontal,
+                orientations: Orientations.horizontal,
               ),
             );
           },
@@ -108,7 +108,7 @@ class TestWidgetNoMessage extends StatelessWidget {
             showCupertinoLoadingDialog(
               context: context,
               direction: const Direction(
-                orientations: Orientations.Vertical,
+                orientations: Orientations.vertical,
               ),
             );
           },

@@ -172,7 +172,7 @@ void main() {
                         context: context,
                         direction: const Direction(
                           message: 'Loading...',
-                          orientations: Orientations.Horizontal,
+                          orientations: Orientations.horizontal,
                         ),
                       );
                     },

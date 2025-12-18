@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-01-18
+
+### Fixed
+- 🔧 Fixed static analysis issues for pub.dev compliance
+  - Fixed enum constant naming (Vertical → vertical, Horizontal → horizontal)
+  - Fixed file naming convention (showBottomDialog.dart → show_bottom_dialog.dart)
+  - Added proper @override annotations for Dialog field overrides
+  - Removed unnecessary Container widget
+  - Added missing curly braces in control flow structures
+  - Added const constructors in tests for better performance
+- 🔧 Updated LICENSE file with full Apache 2.0 text for OSI recognition
+- 🔧 Fixed repository URL validation
+
 ## [1.0.1] - 2025-01-18
 
 ### Fixed

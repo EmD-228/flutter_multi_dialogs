@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 import '../constants/app_constants.dart';
-import '../showBottomDialog.dart';
+import '../show_bottom_dialog.dart';
 
 /// Widget containing all dialog example buttons
 class DialogExamples extends StatelessWidget {
@@ -240,7 +240,7 @@ class DialogExamples extends StatelessWidget {
       context: context,
       direction: const Direction(
         message: "Loading...",
-        orientations: Orientations.Horizontal,
+        orientations: Orientations.horizontal,
         width: 120,
       ),
     );
@@ -250,7 +250,7 @@ class DialogExamples extends StatelessWidget {
     showBottomDialog(
       context: context,
       title: const Text("Title"),
-      content: Container(child: const Text("This is the content")),
+      content: const Text("This is the content"),
       isScrollControlled: true,
       backgroundColor: Colors.deepOrange,
       actions: <Widget>[
@@ -434,7 +434,7 @@ class DialogExamples extends StatelessWidget {
       context: context,
       direction: const Direction(
         message: 'Loading...',
-        orientations: Orientations.Horizontal,
+        orientations: Orientations.horizontal,
       ),
     );
     // Auto-dismiss after 2 seconds for demo
@@ -569,7 +569,7 @@ class DialogExamples extends StatelessWidget {
       context: context,
       direction: const Direction(
         message: 'Loading...',
-        orientations: Orientations.Horizontal,
+        orientations: Orientations.horizontal,
       ),
     );
     // Auto-dismiss after 2 seconds for demo

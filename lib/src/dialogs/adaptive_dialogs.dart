@@ -73,7 +73,7 @@ void showAdaptiveAlertDialog({
 ///   context: context,
 ///   direction: const Direction(
 ///     message: 'Loading...',
-///     orientations: Orientations.Horizontal,
+///     orientations: Orientations.horizontal,
 ///   ),
 /// );
 /// ```

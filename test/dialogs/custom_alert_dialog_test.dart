@@ -13,8 +13,8 @@ void main() {
                 onPressed: () {
                   showCustomAlertDialog(
                     context: context,
-                    dialogBuilder: DialogBuilder(
-                      simpleBuilder: const SimpleBuilder(
+                    dialogBuilder: const DialogBuilder(
+                      simpleBuilder: SimpleBuilder(
                         title: Text('Custom Title'),
                         content: Text('Custom Content'),
                       ),
@@ -55,8 +55,8 @@ void main() {
                 onPressed: () {
                   showCustomAlertDialog(
                     context: context,
-                    dialogBuilder: DialogBuilder(
-                      simpleBuilder: const SimpleBuilder(),
+                    dialogBuilder: const DialogBuilder(
+                      simpleBuilder: SimpleBuilder(),
                     ),
                     confirmWidget: const Text('OK'),
                     onConfirmCallBack: () {},
@@ -94,8 +94,8 @@ void main() {
                 onPressed: () {
                   showCustomAlertDialog(
                     context: context,
-                    dialogBuilder: DialogBuilder(
-                      simpleBuilder: const SimpleBuilder(),
+                    dialogBuilder: const DialogBuilder(
+                      simpleBuilder: SimpleBuilder(),
                     ),
                     confirmWidget: const Text('OK'),
                     onConfirmCallBack: () {

@@ -10,8 +10,8 @@ void main() {
       expect(() => const Direction(), returnsNormally);
       expect(() => const SimpleBuilder(), returnsNormally);
       expect(() => const DialogBuilder(simpleBuilder: SimpleBuilder()), returnsNormally);
-      expect(Orientations.Vertical, isNotNull);
-      expect(Orientations.Horizontal, isNotNull);
+      expect(Orientations.vertical, isNotNull);
+      expect(Orientations.horizontal, isNotNull);
     });
 
     testWidgets('should work with MaterialApp', (WidgetTester tester) async {

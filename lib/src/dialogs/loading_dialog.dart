@@ -11,7 +11,7 @@ import '../utils/material3_helper.dart';
 ///   context: context,
 ///   direction: const Direction(
 ///     message: "Loading...",
-///     orientations: Orientations.Horizontal,
+///     orientations: Orientations.horizontal,
 ///   ),
 /// );
 /// ```
@@ -139,7 +139,7 @@ class LoadingDialog extends Dialog {
 
   /// Changes the content layout based on direction orientation
   Widget _changeDirection(Direction direction) {
-    if (direction.orientations == Orientations.Vertical) {
+    if (direction.orientations == Orientations.vertical) {
       return SizedBox(
         width: direction.width,
         height: direction.height ?? (direction.width != null ? direction.width! + 20 : null),
