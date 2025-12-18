@@ -1,0 +1,23 @@
+# Defines a default set of lint rules enforced for
+# Flutter projects. For details and rationale,
+# see https://github.com/flutter/packages/tree/main/packages/flutter_lints
+include: package:flutter_lints/flutter.yaml
+
+# For lint rules and documentation, see http://dart-lang.github.io/linter/lints.
+# Uncomment to specify additional rules.
+# linter:
+#   rules:
+#     - camel_case_types
+
+analyzer:
+  exclude:
+    - path/to/excluded/files/**
+    - lib/showBottomDialog.dart
+  errors:
+    # treat missing required parameters as a warning (not a hint)
+    missing_required_param: warning
+    # treat missing returns as a warning (not a hint)
+    missing_return: warning
+    # allow having TODOs in the code
+    todo: ignore
+

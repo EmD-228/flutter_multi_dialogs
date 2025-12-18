@@ -1,0 +1,17 @@
+name: multiple_dialog
+description: A Flutter package providing multiple Material Design dialogs with easy-to-use APIs, including loading dialogs, alert dialogs, list dialogs, and customizable dialogs.
+version: 0.2.0
+homepage: https://github.com/Lans/multiple_dialog
+repository: https://github.com/Lans/multiple_dialog
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
