@@ -1,4 +1,4 @@
-# multiple_dialog
+# flutter_multiple_dialog
 
 A Flutter package providing multiple Material Design and Cupertino (iOS) dialogs with easy-to-use APIs, including loading dialogs, alert dialogs, list dialogs, action sheets, and customizable dialogs.
 
