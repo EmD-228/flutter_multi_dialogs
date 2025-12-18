@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showCupertinoActionSheet', () {
-    testWidgets('should display Cupertino action sheet with title and message', (tester) async {
+    testWidgets('should display Cupertino action sheet with title and message',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidget(),
@@ -19,7 +20,8 @@ void main() {
       expect(find.text('Cancel'), findsOneWidget);
     });
 
-    testWidgets('should display action sheet with custom actions', (tester) async {
+    testWidgets('should display action sheet with custom actions',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidgetWithActions(),
@@ -147,4 +149,3 @@ class TestListWidget extends StatelessWidget {
     );
   }
 }
-

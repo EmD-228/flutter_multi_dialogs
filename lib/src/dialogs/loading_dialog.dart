@@ -94,13 +94,13 @@ class LoadingDialog extends Dialog {
   @override
   Widget build(BuildContext context) {
     final DialogThemeData dialogTheme = DialogTheme.of(context);
-    
+
     // Get adaptive values for Material 3 support
     final ShapeBorder adaptiveShape = shape ??
         dialogTheme.shape ??
         Material3Helper.getAdaptiveDialogShape(context);
-    final Color adaptiveBackgroundColor = backgroundColor ??
-        Material3Helper.getDialogBackgroundColor(context);
+    final Color adaptiveBackgroundColor =
+        backgroundColor ?? Material3Helper.getDialogBackgroundColor(context);
     final double adaptiveElevation = elevation ??
         dialogTheme.elevation ??
         Material3Helper.getAdaptiveElevation(context);
@@ -142,10 +142,11 @@ class LoadingDialog extends Dialog {
     if (direction.orientations == Orientations.vertical) {
       return SizedBox(
         width: direction.width,
-        height: direction.height ?? (direction.width != null ? direction.width! + 20 : null),
+        height: direction.height ??
+            (direction.width != null ? direction.width! + 20 : null),
         child: Column(
           mainAxisAlignment:
-          direction.mainAxisAlignment ?? MainAxisAlignment.center,
+              direction.mainAxisAlignment ?? MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             CircularProgressIndicator(
@@ -170,7 +171,7 @@ class LoadingDialog extends Dialog {
         height: direction.height,
         child: Row(
           mainAxisAlignment:
-          direction.mainAxisAlignment ?? MainAxisAlignment.start,
+              direction.mainAxisAlignment ?? MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Padding(
@@ -196,4 +197,3 @@ class LoadingDialog extends Dialog {
     }
   }
 }
-

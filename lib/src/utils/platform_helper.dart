@@ -39,4 +39,3 @@ class PlatformHelper {
   /// Checks if running on web
   static bool get isWeb => kIsWeb;
 }
-

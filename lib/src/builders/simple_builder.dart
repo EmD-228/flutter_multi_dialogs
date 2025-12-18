@@ -73,4 +73,3 @@ class SimpleBuilder {
     this.semanticLabel,
   });
 }
-

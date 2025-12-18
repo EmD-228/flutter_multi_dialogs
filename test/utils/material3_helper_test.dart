@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/src/utils/material3_helper.dart';
 
 void main() {
   group('Material3Helper', () {
-    testWidgets('should return 28.0 border radius for Material 3', (tester) async {
+    testWidgets('should return 28.0 border radius for Material 3',
+        (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: ThemeData(useMaterial3: true),
@@ -19,7 +20,8 @@ void main() {
       );
     });
 
-    testWidgets('should return 12.0 border radius for Material 2', (tester) async {
+    testWidgets('should return 12.0 border radius for Material 2',
+        (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: ThemeData(useMaterial3: false),
@@ -34,7 +36,8 @@ void main() {
       );
     });
 
-    testWidgets('should return adaptive dialog shape for Material 3', (tester) async {
+    testWidgets('should return adaptive dialog shape for Material 3',
+        (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: ThemeData(useMaterial3: true),
@@ -51,7 +54,8 @@ void main() {
       );
     });
 
-    testWidgets('should return adaptive dialog shape for Material 2', (tester) async {
+    testWidgets('should return adaptive dialog shape for Material 2',
+        (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: ThemeData(useMaterial3: false),
@@ -66,7 +70,8 @@ void main() {
       );
     });
 
-    testWidgets('should return dialog background color from DialogTheme', (tester) async {
+    testWidgets('should return dialog background color from DialogTheme',
+        (tester) async {
       const testColor = Colors.red;
       await tester.pumpWidget(
         MaterialApp(
@@ -85,7 +90,9 @@ void main() {
       );
     });
 
-    testWidgets('should return surface color when DialogTheme backgroundColor is null', (tester) async {
+    testWidgets(
+        'should return surface color when DialogTheme backgroundColor is null',
+        (tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: ThemeData(
@@ -134,4 +141,3 @@ void main() {
     });
   });
 }
-

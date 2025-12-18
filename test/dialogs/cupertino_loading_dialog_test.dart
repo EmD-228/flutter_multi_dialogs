@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showCupertinoLoadingDialog', () {
-    testWidgets('should display loading dialog with vertical orientation', (tester) async {
+    testWidgets('should display loading dialog with vertical orientation',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidget(),
@@ -18,7 +19,8 @@ void main() {
       expect(find.text('Loading...'), findsOneWidget);
     });
 
-    testWidgets('should display loading dialog with horizontal orientation', (tester) async {
+    testWidgets('should display loading dialog with horizontal orientation',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidgetHorizontal(),
@@ -32,7 +34,8 @@ void main() {
       expect(find.text('Loading...'), findsOneWidget);
     });
 
-    testWidgets('should display loading dialog without message', (tester) async {
+    testWidgets('should display loading dialog without message',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidgetNoMessage(),
@@ -118,4 +121,3 @@ class TestWidgetNoMessage extends StatelessWidget {
     );
   }
 }
-

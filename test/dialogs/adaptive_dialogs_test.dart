@@ -5,7 +5,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('Adaptive Dialogs', () {
-    testWidgets('showAdaptiveAlertDialog should use Material on Android', (tester) async {
+    testWidgets('showAdaptiveAlertDialog should use Material on Android',
+        (tester) async {
       // Simulate Android platform
       await tester.pumpWidget(
         MaterialApp(
@@ -193,4 +194,3 @@ void main() {
     });
   });
 }
-

@@ -68,12 +68,12 @@ class SimpleListDialog extends StatelessWidget {
     assert(debugCheckHasMaterialLocalizations(context));
     final ThemeData theme = Theme.of(context);
     final List<Widget> body = <Widget>[];
-    
+
     for (var index = 0; index < children.length; index++) {
       if (showDividers && index > 0) {
         body.add(const Divider(height: 1));
       }
-      
+
       body.add(
         Material(
           color: Colors.transparent,
@@ -85,10 +85,11 @@ class SimpleListDialog extends StatelessWidget {
             highlightColor: itemHighlightColor ?? theme.highlightColor,
             splashColor: theme.splashColor,
             child: Padding(
-              padding: itemPadding ?? const EdgeInsets.symmetric(
-                horizontal: 24.0,
-                vertical: 16.0,
-              ),
+              padding: itemPadding ??
+                  const EdgeInsets.symmetric(
+                    horizontal: 24.0,
+                    vertical: 16.0,
+                  ),
               child: children[index],
             ),
           ),
@@ -102,4 +103,3 @@ class SimpleListDialog extends StatelessWidget {
     );
   }
 }
-

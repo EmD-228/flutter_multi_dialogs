@@ -1,6 +1,6 @@
 name: flutter_multi_dialogs
 description: A Flutter package providing multiple Material Design dialogs with easy-to-use APIs, including loading dialogs, alert dialogs, list dialogs, and customizable dialogs.
-version: 1.0.2
+version: 1.0.4
 homepage: https://github.com/EmD-228/flutter_multi_dialogs
 repository: https://github.com/EmD-228/flutter_multi_dialogs
 

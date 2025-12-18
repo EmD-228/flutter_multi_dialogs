@@ -9,7 +9,8 @@ void main() {
       // Test that all main classes and functions are accessible
       expect(() => const Direction(), returnsNormally);
       expect(() => const SimpleBuilder(), returnsNormally);
-      expect(() => const DialogBuilder(simpleBuilder: SimpleBuilder()), returnsNormally);
+      expect(() => const DialogBuilder(simpleBuilder: SimpleBuilder()),
+          returnsNormally);
       expect(Orientations.vertical, isNotNull);
       expect(Orientations.horizontal, isNotNull);
     });

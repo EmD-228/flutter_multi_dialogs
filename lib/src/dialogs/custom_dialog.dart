@@ -132,8 +132,8 @@ class CustomDialog extends StatelessWidget {
     final ShapeBorder adaptiveShape = shape ??
         dialogTheme.shape ??
         Material3Helper.getAdaptiveDialogShape(context);
-    final Color adaptiveBackgroundColor = backgroundColor ??
-        Material3Helper.getDialogBackgroundColor(context);
+    final Color adaptiveBackgroundColor =
+        backgroundColor ?? Material3Helper.getDialogBackgroundColor(context);
     final double adaptiveElevation = elevation ??
         dialogTheme.elevation ??
         Material3Helper.getAdaptiveElevation(context);
@@ -196,4 +196,3 @@ class CustomSimpleDialog extends StatelessWidget {
     );
   }
 }
-

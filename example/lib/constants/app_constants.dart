@@ -15,6 +15,6 @@ class AppConstants {
   static const double defaultButtonElevation = 10.0;
 
   /// Default text style for buttons
-  static const TextStyle defaultButtonTextStyle = TextStyle(color: Colors.black);
+  static const TextStyle defaultButtonTextStyle =
+      TextStyle(color: Colors.black);
 }
-

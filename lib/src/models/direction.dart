@@ -32,4 +32,3 @@ class Direction {
     this.mainAxisAlignment,
   });
 }
-

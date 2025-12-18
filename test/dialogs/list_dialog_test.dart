@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showSimpleListDialog', () {
-    testWidgets('should display list dialog with items', (WidgetTester tester) async {
+    testWidgets('should display list dialog with items',
+        (WidgetTester tester) async {
       final items = ['Item 1', 'Item 2', 'Item 3'];
 
       await tester.pumpWidget(
@@ -37,13 +38,14 @@ void main() {
       expect(find.text('Item 1'), findsOneWidget);
       expect(find.text('Item 2'), findsOneWidget);
       expect(find.text('Item 3'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('Item 1'));
       await tester.pumpAndSettle();
     });
 
-    testWidgets('should call callback when item is tapped', (WidgetTester tester) async {
+    testWidgets('should call callback when item is tapped',
+        (WidgetTester tester) async {
       int? selectedIndex;
 
       await tester.pumpWidget(
@@ -83,7 +85,8 @@ void main() {
       expect(find.byType(SimpleDialog), findsNothing);
     });
 
-    testWidgets('should display dividers when showDividers is true', (WidgetTester tester) async {
+    testWidgets('should display dividers when showDividers is true',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -113,11 +116,10 @@ void main() {
       await tester.pump(const Duration(milliseconds: 300));
 
       expect(find.byType(Divider), findsWidgets);
-      
+
       // Close dialog
       await tester.tap(find.text('Item 1'));
       await tester.pumpAndSettle();
     });
   });
 }
-

@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showSuccessDialog', () {
-    testWidgets('should display success dialog with check icon', (WidgetTester tester) async {
+    testWidgets('should display success dialog with check icon',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -32,7 +33,7 @@ void main() {
       expect(find.text('Success!'), findsOneWidget);
       expect(find.text('Operation completed successfully.'), findsOneWidget);
       expect(find.text('OK'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('OK'));
       await tester.pump();
@@ -74,7 +75,8 @@ void main() {
   });
 
   group('showErrorDialog', () {
-    testWidgets('should display error dialog with error icon', (WidgetTester tester) async {
+    testWidgets('should display error dialog with error icon',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -101,13 +103,14 @@ void main() {
       expect(find.byIcon(Icons.error), findsOneWidget);
       expect(find.text('Error'), findsOneWidget);
       expect(find.text('An error occurred.'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('OK'));
       await tester.pump();
     });
 
-    testWidgets('should display error details when provided', (WidgetTester tester) async {
+    testWidgets('should display error details when provided',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -132,7 +135,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 300));
 
       expect(find.text('Error code: 500'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('OK'));
       await tester.pump();
@@ -140,7 +143,8 @@ void main() {
   });
 
   group('showWarningDialog', () {
-    testWidgets('should display warning dialog with warning icon', (WidgetTester tester) async {
+    testWidgets('should display warning dialog with warning icon',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -167,13 +171,14 @@ void main() {
       expect(find.byIcon(Icons.warning), findsOneWidget);
       expect(find.text('Warning'), findsOneWidget);
       expect(find.text('Are you sure?'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('OK'));
       await tester.pump();
     });
 
-    testWidgets('should display both confirm and cancel buttons', (WidgetTester tester) async {
+    testWidgets('should display both confirm and cancel buttons',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -200,7 +205,7 @@ void main() {
 
       expect(find.text('Yes'), findsOneWidget);
       expect(find.text('No'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('No'));
       await tester.pump();
@@ -208,7 +213,8 @@ void main() {
   });
 
   group('showInfoDialog', () {
-    testWidgets('should display info dialog with info icon', (WidgetTester tester) async {
+    testWidgets('should display info dialog with info icon',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -235,11 +241,10 @@ void main() {
       expect(find.byIcon(Icons.info), findsOneWidget);
       expect(find.text('Information'), findsOneWidget);
       expect(find.text('This is an info message.'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('OK'));
       await tester.pump();
     });
   });
 }
-

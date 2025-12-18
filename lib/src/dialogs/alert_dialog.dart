@@ -35,12 +35,14 @@ void showAlertDialog({
   RouteSettings? routeSettings,
   Duration transitionDuration = const Duration(milliseconds: 200),
   Curve transitionCurve = Curves.easeOut,
-  Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)? transitionBuilder,
+  Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+      transitionBuilder,
 }) {
   showGeneralDialog<void>(
     context: context,
     barrierDismissible: barrierDismissible,
-    barrierLabel: semanticLabel ?? MaterialLocalizations.of(context).modalBarrierDismissLabel,
+    barrierLabel: semanticLabel ??
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
     barrierColor: Colors.black54,
     transitionDuration: transitionDuration,
     transitionBuilder: transitionBuilder ??
@@ -118,7 +120,8 @@ void showIconAlertDialog({
   showGeneralDialog<void>(
     context: context,
     barrierDismissible: barrierDismissible,
-    barrierLabel: semanticLabel ?? MaterialLocalizations.of(context).modalBarrierDismissLabel,
+    barrierLabel: semanticLabel ??
+        MaterialLocalizations.of(context).modalBarrierDismissLabel,
     barrierColor: Colors.black54,
     transitionDuration: transitionDuration,
     transitionBuilder: (context, animation, secondaryAnimation, child) {
@@ -168,4 +171,3 @@ void showIconAlertDialog({
     routeSettings: routeSettings,
   );
 }
-

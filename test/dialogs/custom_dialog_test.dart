@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showCustomDialog', () {
-    testWidgets('should display custom dialog with child', (WidgetTester tester) async {
+    testWidgets('should display custom dialog with child',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -28,13 +29,14 @@ void main() {
       await tester.pump(const Duration(milliseconds: 300));
 
       expect(find.text('Custom Content'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
 
-    testWidgets('should throw FormatException for invalid gravity', (WidgetTester tester) async {
+    testWidgets('should throw FormatException for invalid gravity',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -61,7 +63,8 @@ void main() {
       expect(tester.takeException(), isA<FormatException>());
     });
 
-    testWidgets('should display custom dialog with center gravity', (WidgetTester tester) async {
+    testWidgets('should display custom dialog with center gravity',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -86,7 +89,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 300));
 
       expect(find.text('Centered'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
@@ -94,7 +97,8 @@ void main() {
   });
 
   group('showCustomSimpleDialog', () {
-    testWidgets('should display custom simple dialog', (WidgetTester tester) async {
+    testWidgets('should display custom simple dialog',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -124,11 +128,10 @@ void main() {
       expect(find.text('Title'), findsOneWidget);
       expect(find.text('Child 1'), findsOneWidget);
       expect(find.text('Child 2'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
   });
 }
-

@@ -27,12 +27,12 @@ class Material3Helper {
   static Color getDialogBackgroundColor(BuildContext context) {
     final DialogThemeData dialogTheme = DialogTheme.of(context);
     final ThemeData theme = Theme.of(context);
-    
+
     // First check if explicitly set in DialogTheme
     if (dialogTheme.backgroundColor != null) {
       return dialogTheme.backgroundColor!;
     }
-    
+
     // Use surface color for both Material 2 and Material 3
     // This is the recommended approach and works for both
     return theme.colorScheme.surface;
@@ -46,4 +46,3 @@ class Material3Helper {
     return theme.useMaterial3 ? 3.0 : 24.0;
   }
 }
-

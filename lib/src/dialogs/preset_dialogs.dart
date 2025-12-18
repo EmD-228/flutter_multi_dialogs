@@ -224,4 +224,3 @@ void showInfoDialog({
     routeSettings: routeSettings,
   );
 }
-

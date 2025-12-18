@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showCustomAlertDialog', () {
-    testWidgets('should display custom alert dialog with builder', (WidgetTester tester) async {
+    testWidgets('should display custom alert dialog with builder',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -40,13 +41,14 @@ void main() {
       expect(find.text('Custom Content'), findsOneWidget);
       expect(find.text('Confirm'), findsOneWidget);
       expect(find.text('Cancel'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('Cancel'));
       await tester.pumpAndSettle();
     });
 
-    testWidgets('should auto-close when action is tapped', (WidgetTester tester) async {
+    testWidgets('should auto-close when action is tapped',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -83,7 +85,8 @@ void main() {
       expect(find.byType(AlertDialog), findsNothing);
     });
 
-    testWidgets('should not auto-close when autoCloseOnAction is false', (WidgetTester tester) async {
+    testWidgets('should not auto-close when autoCloseOnAction is false',
+        (WidgetTester tester) async {
       bool callbackCalled = false;
 
       await tester.pumpWidget(
@@ -121,11 +124,10 @@ void main() {
       expect(callbackCalled, true);
       // Dialog should still be visible
       expect(find.byType(AlertDialog), findsOneWidget);
-      
+
       // Close dialog manually
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
   });
 }
-

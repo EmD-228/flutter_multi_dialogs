@@ -354,7 +354,8 @@ class DialogExamples extends StatelessWidget {
     showWarningDialog(
       context: context,
       title: 'Warning',
-      message: 'Are you sure you want to delete this item? This action cannot be undone.',
+      message:
+          'Are you sure you want to delete this item? This action cannot be undone.',
       confirmText: 'Delete',
       cancelText: 'Cancel',
       onConfirm: () {
@@ -370,7 +371,8 @@ class DialogExamples extends StatelessWidget {
     showInfoDialog(
       context: context,
       title: 'Information',
-      message: 'This is an informational message. You can use this to provide helpful context to users.',
+      message:
+          'This is an informational message. You can use this to provide helpful context to users.',
       onConfirm: () {
         debugPrint('Info dialog confirmed');
       },
@@ -500,7 +502,8 @@ class DialogExamples extends StatelessWidget {
     showAdaptiveAlertDialog(
       context: context,
       title: 'Confirm Action',
-      content: 'This dialog automatically uses Cupertino on iOS and Material on Android.',
+      content:
+          'This dialog automatically uses Cupertino on iOS and Material on Android.',
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
@@ -518,7 +521,8 @@ class DialogExamples extends StatelessWidget {
     showAdaptiveSuccessDialog(
       context: context,
       title: 'Success!',
-      message: 'Operation completed successfully. This dialog adapts to the platform.',
+      message:
+          'Operation completed successfully. This dialog adapts to the platform.',
       onConfirm: () {
         debugPrint('Adaptive success dialog confirmed');
       },
@@ -557,7 +561,8 @@ class DialogExamples extends StatelessWidget {
     showAdaptiveInfoDialog(
       context: context,
       title: 'Information',
-      message: 'This is an adaptive dialog that uses the native platform style.',
+      message:
+          'This is an adaptive dialog that uses the native platform style.',
       onConfirm: () {
         debugPrint('Adaptive info dialog confirmed');
       },
@@ -603,4 +608,3 @@ class _DialogButton extends StatelessWidget {
     );
   }
 }
-

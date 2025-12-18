@@ -99,4 +99,3 @@ class CupertinoLoadingDialog extends StatelessWidget {
     }
   }
 }
-

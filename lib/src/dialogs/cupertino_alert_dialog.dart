@@ -37,13 +37,14 @@ void showCupertinoAlertDialog({
       return CupertinoAlertDialog(
         title: title != null ? Text(title) : null,
         content: content != null ? Text(content) : null,
-        actions: actions ?? [
-          CupertinoDialogAction(
-            isDefaultAction: true,
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('OK'),
-          ),
-        ],
+        actions: actions ??
+            [
+              CupertinoDialogAction(
+                isDefaultAction: true,
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('OK'),
+              ),
+            ],
       );
     },
   );
@@ -107,15 +108,15 @@ void showCupertinoIconAlertDialog({
               )
             : null,
         content: content != null ? Text(content) : null,
-        actions: actions ?? [
-          CupertinoDialogAction(
-            isDefaultAction: true,
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('OK'),
-          ),
-        ],
+        actions: actions ??
+            [
+              CupertinoDialogAction(
+                isDefaultAction: true,
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('OK'),
+              ),
+            ],
       );
     },
   );
 }
-

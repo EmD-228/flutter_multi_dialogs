@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('Cupertino Preset Dialogs', () {
-    testWidgets('showCupertinoSuccessDialog should display success dialog', (tester) async {
+    testWidgets('showCupertinoSuccessDialog should display success dialog',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestSuccessWidget(),
@@ -14,12 +15,14 @@ void main() {
       await tester.tap(find.text('Show Success'));
       await tester.pumpAndSettle();
 
-      expect(find.byIcon(CupertinoIcons.check_mark_circled_solid), findsOneWidget);
+      expect(
+          find.byIcon(CupertinoIcons.check_mark_circled_solid), findsOneWidget);
       expect(find.text('Success!'), findsOneWidget);
       expect(find.text('Operation completed.'), findsOneWidget);
     });
 
-    testWidgets('showCupertinoErrorDialog should display error dialog', (tester) async {
+    testWidgets('showCupertinoErrorDialog should display error dialog',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestErrorWidget(),
@@ -29,11 +32,13 @@ void main() {
       await tester.tap(find.text('Show Error'));
       await tester.pumpAndSettle();
 
-      expect(find.byIcon(CupertinoIcons.exclamationmark_circle_fill), findsOneWidget);
+      expect(find.byIcon(CupertinoIcons.exclamationmark_circle_fill),
+          findsOneWidget);
       expect(find.text('Error!'), findsOneWidget);
     });
 
-    testWidgets('showCupertinoWarningDialog should display warning dialog', (tester) async {
+    testWidgets('showCupertinoWarningDialog should display warning dialog',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWarningWidget(),
@@ -43,13 +48,15 @@ void main() {
       await tester.tap(find.text('Show Warning'));
       await tester.pumpAndSettle();
 
-      expect(find.byIcon(CupertinoIcons.exclamationmark_triangle_fill), findsOneWidget);
+      expect(find.byIcon(CupertinoIcons.exclamationmark_triangle_fill),
+          findsOneWidget);
       expect(find.text('Warning!'), findsOneWidget);
       expect(find.text('Cancel'), findsOneWidget);
       expect(find.text('Continue'), findsOneWidget);
     });
 
-    testWidgets('showCupertinoInfoDialog should display info dialog', (tester) async {
+    testWidgets('showCupertinoInfoDialog should display info dialog',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestInfoWidget(),
@@ -154,4 +161,3 @@ class TestInfoWidget extends StatelessWidget {
     );
   }
 }
-

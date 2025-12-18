@@ -34,7 +34,7 @@ void showCustomAlertDialog({
   showGeneralDialog<void>(
     context: context,
     barrierDismissible: barrierDismissible,
-    barrierLabel: dialogBuilder.simpleBuilder.semanticLabel ?? 
+    barrierLabel: dialogBuilder.simpleBuilder.semanticLabel ??
         MaterialLocalizations.of(context).modalBarrierDismissLabel,
     barrierColor: Colors.black54,
     transitionDuration: transitionDuration,
@@ -125,4 +125,3 @@ class CustomAlertDialog extends StatelessWidget {
     );
   }
 }
-

@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showCupertinoAlertDialog', () {
-    testWidgets('should display Cupertino alert dialog with title and content', (tester) async {
+    testWidgets('should display Cupertino alert dialog with title and content',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidget(),
@@ -21,7 +22,8 @@ void main() {
       expect(find.text('OK'), findsOneWidget);
     });
 
-    testWidgets('should display Cupertino alert dialog with custom actions', (tester) async {
+    testWidgets('should display Cupertino alert dialog with custom actions',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidgetWithActions(),
@@ -56,7 +58,8 @@ void main() {
   });
 
   group('showCupertinoIconAlertDialog', () {
-    testWidgets('should display Cupertino alert dialog with icon', (tester) async {
+    testWidgets('should display Cupertino alert dialog with icon',
+        (tester) async {
       await tester.pumpWidget(
         const CupertinoApp(
           home: TestWidgetWithIcon(),
@@ -149,4 +152,3 @@ class TestWidgetWithIcon extends StatelessWidget {
     );
   }
 }
-

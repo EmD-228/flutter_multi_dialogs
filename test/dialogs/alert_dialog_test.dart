@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('showAlertDialog', () {
-    testWidgets('should display alert dialog with title and content', (WidgetTester tester) async {
+    testWidgets('should display alert dialog with title and content',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -31,13 +32,14 @@ void main() {
       expect(find.text('Test Title'), findsOneWidget);
       expect(find.text('Test Content'), findsOneWidget);
       expect(find.byType(AlertDialog), findsOneWidget);
-      
+
       // Close dialog by tapping barrier
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
 
-    testWidgets('should display alert dialog with actions', (WidgetTester tester) async {
+    testWidgets('should display alert dialog with actions',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -73,13 +75,14 @@ void main() {
 
       expect(find.text('OK'), findsOneWidget);
       expect(find.text('Cancel'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tap(find.text('Cancel'));
       await tester.pumpAndSettle();
     });
 
-    testWidgets('should close dialog when barrier is tapped', (WidgetTester tester) async {
+    testWidgets('should close dialog when barrier is tapped',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -115,7 +118,8 @@ void main() {
   });
 
   group('showIconAlertDialog', () {
-    testWidgets('should display icon alert dialog with icon', (WidgetTester tester) async {
+    testWidgets('should display icon alert dialog with icon',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -143,13 +147,14 @@ void main() {
       expect(find.byIcon(Icons.check_circle), findsOneWidget);
       expect(find.text('Success'), findsOneWidget);
       expect(find.text('Operation completed'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
 
-    testWidgets('should display icon alert dialog with custom icon widget', (WidgetTester tester) async {
+    testWidgets('should display icon alert dialog with custom icon widget',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -175,11 +180,10 @@ void main() {
 
       expect(find.byIcon(Icons.warning), findsOneWidget);
       expect(find.text('Warning'), findsOneWidget);
-      
+
       // Close dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
   });
 }
-

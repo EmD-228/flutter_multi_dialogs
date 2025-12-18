@@ -4,7 +4,8 @@ import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 void main() {
   group('LoadingDialog', () {
-    testWidgets('should display loading dialog with vertical orientation', (WidgetTester tester) async {
+    testWidgets('should display loading dialog with vertical orientation',
+        (WidgetTester tester) async {
       const direction = Direction(
         message: 'Loading...',
         orientations: Orientations.vertical,
@@ -35,13 +36,14 @@ void main() {
 
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
       expect(find.text('Loading...'), findsOneWidget);
-      
+
       // Close the dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
 
-    testWidgets('should display loading dialog with horizontal orientation', (WidgetTester tester) async {
+    testWidgets('should display loading dialog with horizontal orientation',
+        (WidgetTester tester) async {
       const direction = Direction(
         message: 'Processing',
         orientations: Orientations.horizontal,
@@ -72,13 +74,14 @@ void main() {
 
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
       expect(find.text('Processing'), findsOneWidget);
-      
+
       // Close the dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
 
-    testWidgets('should use custom progress indicator color', (WidgetTester tester) async {
+    testWidgets('should use custom progress indicator color',
+        (WidgetTester tester) async {
       const direction = Direction(
         message: 'Loading...',
         orientations: Orientations.vertical,
@@ -113,11 +116,10 @@ void main() {
       );
       expect(progressIndicator.color, Colors.red);
       expect(progressIndicator.strokeWidth, 3.0);
-      
+
       // Close the dialog
       await tester.tapAt(const Offset(10, 10));
       await tester.pump();
     });
   });
 }
-
