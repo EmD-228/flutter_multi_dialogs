@@ -1,11 +1,11 @@
 {
   "roots": [
-    "multiple_dialog"
+    "flutter_multi_dialogs"
   ],
   "packages": [
     {
-      "name": "multiple_dialog",
-      "version": "0.4.0",
+      "name": "flutter_multi_dialogs",
+      "version": "1.0.1",
       "dependencies": [
         "flutter"
       ],

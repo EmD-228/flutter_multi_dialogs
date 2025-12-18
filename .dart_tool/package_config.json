@@ -158,7 +158,7 @@
       "languageVersion": "3.5"
     },
     {
-      "name": "multiple_dialog",
+      "name": "flutter_multi_dialogs",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.17"

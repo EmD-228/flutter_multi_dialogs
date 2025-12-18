@@ -1,8 +1,8 @@
-# flutter_multiple_dialogs
+# flutter_flutter_multi_dialogss
 
 A Flutter package providing multiple Material Design and Cupertino (iOS) dialogs with easy-to-use APIs, including loading dialogs, alert dialogs, list dialogs, action sheets, and customizable dialogs.
 
-[![Pub](https://img.shields.io/pub/v/multiple_dialog.svg?style=flat-square)](https://pub.dev/packages/multiple_dialog)
+[![Pub](https://img.shields.io/pub/v/flutter_multi_dialogs.svg?style=flat-square)](https://pub.dev/packages/flutter_multi_dialogs)
 [![support](https://img.shields.io/badge/platform-flutter%7Cdart-ff69b4.svg?style=flat-square)](https://github.com/EmD-228/flutter_multi_dialogs)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
 
@@ -83,13 +83,13 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  multiple_dialog: ^0.2.0
+  flutter_multi_dialogs: ^0.2.0
 ```
 
 Then import it in your Dart code:
 
 ```dart
-import 'package:multiple_dialog/multiple_dialog.dart';
+import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 ```
 
 ## Usage Examples

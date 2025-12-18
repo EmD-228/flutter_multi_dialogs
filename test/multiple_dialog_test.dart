@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:multiple_dialog/multiple_dialog.dart';
+import 'package:flutter_multi_dialogs/flutter_multi_dialogs.dart';
 
 /// Main test file that runs all tests
 void main() {

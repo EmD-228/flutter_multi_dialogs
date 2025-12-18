@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:multiple_dialog/src/utils/material3_helper.dart';
+import 'package:flutter_multi_dialogs/src/utils/material3_helper.dart';
 
 void main() {
   group('Material3Helper', () {

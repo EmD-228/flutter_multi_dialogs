@@ -1,0 +1,25 @@
+# Files to exclude from pub.dev publication
+
+# Build files
+build/
+**/build/
+
+# Dart tool files
+.dart_tool/
+**/.dart_tool/
+
+# Coverage
+coverage/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files (except example)
+pubspec.lock
+

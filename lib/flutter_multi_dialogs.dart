@@ -1,6 +1,6 @@
 /// Multiple Dialog - A Flutter package providing multiple Material Design and Cupertino dialogs
 /// with easy-to-use APIs
-library multiple_dialog;
+library flutter_multi_dialogs;
 
 // Export builders
 export 'src/builders/dialog_builder.dart';

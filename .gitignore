@@ -79,9 +79,10 @@ pubspec.lock
 # Old screenshot files (keep only screenshots/ directory)
 enframe_*.png
 
-# Markdown files (keep only README.md at root)
+# Markdown files (keep only README.md and CHANGELOG.md at root)
 *.md
 !README.md
+!CHANGELOG.md
 
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
